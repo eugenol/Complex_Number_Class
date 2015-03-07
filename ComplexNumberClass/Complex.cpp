@@ -37,6 +37,7 @@ void Complex::setComplex(double real, double imaginary)
 Complex Complex::conjugate()
 {
 	Complex retval;
+
 	retval.setComplex(Re, Im*-1);
 	return retval;
 }
@@ -53,6 +54,7 @@ Complex Complex::operator+(Complex &b)
 Complex Complex::operator-(Complex &b)
 {
 	Complex retval;
+
 	retval.Re = Re - b.Re;
 	retval.Im = Im - b.Im;
 
@@ -62,6 +64,7 @@ Complex Complex::operator-(Complex &b)
 Complex Complex::operator*(Complex &b)
 {
 	Complex retval;
+
 	retval.Re = Re*b.Re - Im*b.Im;
 	retval.Im = Re*b.Im + Im*b.Re;
 
@@ -71,6 +74,11 @@ Complex Complex::operator*(Complex &b)
 Complex Complex::operator/(Complex &b)
 {
 	Complex retval;
-	//
+	int temp;
+
+	temp = b.Re*b.Re + b.Im*b.Im;
+	retval.Re = (Re*b.Re + Im*b.Im) / temp;
+	retval.Im = (Im*b.Re - Re*b.Im) / temp;
+
 	return retval;
 }
