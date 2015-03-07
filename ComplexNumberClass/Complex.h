@@ -2,17 +2,24 @@
 #define COMPLEX_H
 class Complex
 {
-	int Re;
-	int Im;
+	double Re;
+	double Im;
 public:
 	Complex();
 	~Complex();
 
-	void setReal(int real);
-	void setImaginary(int imaginary);
-	int getReal(void);
-	int getImaginary();
-	void setComplex(int real, int imaginary);
+	void setReal(double real);
+	void setImaginary(double imaginary);
+	double getReal(void);
+	double getImaginary();
+	void setComplex(double real, double imaginary);
+
+	Complex conjugate(void);
+	//Operator overloading
+	Complex operator+(Complex &b);
+	Complex operator-(Complex &b);
+	Complex operator*(Complex &b);
+	Complex operator/(Complex &b);
 };
 #endif
 
