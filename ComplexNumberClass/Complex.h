@@ -8,11 +8,11 @@ public:
 	Complex();
 	~Complex();
 
-	void setReal(double real);
-	void setImaginary(double imaginary);
-	double getReal(void);
-	double getImaginary();
-	void setComplex(double real, double imaginary);
+	void setReal(double real) { Re = real; };
+	void setImaginary(double imaginary) { Im = imaginary; };
+	double getReal(void) { return Re; };
+	double getImaginary(void) { return Im; };
+	void setComplex(double real, double imaginary) { Re = real; Im = imaginary; };
 
 	Complex conjugate(void);
 	//Operator overloading

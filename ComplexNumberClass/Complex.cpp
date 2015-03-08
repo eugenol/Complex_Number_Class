@@ -11,7 +11,7 @@ Complex::Complex()
 Complex::~Complex()
 {
 }
-
+/*
 void Complex::setReal(double real)
 {
 	Re = real;
@@ -33,7 +33,7 @@ void Complex::setComplex(double real, double imaginary)
 	Re = real;
 	Im = imaginary;
 }
-
+*/
 Complex Complex::conjugate()
 {
 	Complex retval;
@@ -74,7 +74,7 @@ Complex Complex::operator*(Complex &b)
 Complex Complex::operator/(Complex &b)
 {
 	Complex retval;
-	int temp;
+	double temp;
 
 	temp = b.Re*b.Re + b.Im*b.Im;
 	retval.Re = (Re*b.Re + Im*b.Im) / temp;
