@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 	cout << endl;
 	
 	res = a + b;
-	cout << "a+b = " << res.getReal() << " " << res.getImaginary() << "i" <<endl;
+	cout << "a+b = " << a + b;
 
 	return 0;
 }

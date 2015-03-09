@@ -1,5 +1,6 @@
 #include "Complex.h"
 
+using namespace std;
 
 Complex::Complex()
 {
@@ -11,6 +12,7 @@ Complex::Complex()
 Complex::~Complex()
 {
 }
+//Replaced by inline finctions
 /*
 void Complex::setReal(double real)
 {
@@ -20,7 +22,7 @@ void Complex::setImaginary(double imaginary)
 {
 	Im = imaginary;
 }
-double Complex::getReal(void)
+double Complex::getReal()
 {
 	return Re;
 }
@@ -81,4 +83,18 @@ Complex Complex::operator/(Complex &b)
 	retval.Im = (Im*b.Re - Re*b.Im) / temp;
 
 	return retval;
+}
+
+ostream &operator<<(ostream &os, const Complex &b)
+{
+	if (b.Im < 0)
+		cout << b.Re << b.Im;
+	else
+		cout << b.Re << "+" << b.Im << "i";
+
+	return os;
+}
+istream &operator>>(istream &is, Complex &b)
+{
+
 }

@@ -1,5 +1,9 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
+#include <iostream>
+
+using namespace std;
+
 class Complex
 {
 	double Re;
@@ -20,6 +24,9 @@ public:
 	Complex operator-(Complex &b);
 	Complex operator*(Complex &b);
 	Complex operator/(Complex &b);
+
+	friend ostream &operator<<(ostream &os, const Complex &b);
+	friend istream &operator>>(istream &is, Complex &b);
 };
 #endif
 
