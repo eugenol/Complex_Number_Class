@@ -31,7 +31,9 @@ int main(int argc, char* argv[])
 	cout << endl;
 	
 	res = a + b;
-	cout << "a+b = " << a + b;
+	cout << "a+b = " << res;
+
+
 
 	return 0;
 }
