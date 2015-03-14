@@ -26,6 +26,7 @@ public:
 	Complex operator/(Complex &b);
 	Complex operator=(Complex &b);
 	Complex operator+=(Complex &b);
+	Complex operator-=(Complex &b);
 
 	friend ostream &operator<<(ostream &os, const Complex &b);
 	friend istream &operator>>(istream &is, Complex &b);

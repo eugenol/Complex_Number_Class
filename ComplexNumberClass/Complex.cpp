@@ -102,6 +102,15 @@ Complex Complex::operator+=(Complex &b)
 	return retval;
 }
 
+Complex Complex::operator-=(Complex &b)
+{
+	Complex retval;
+
+	retval = *this - b;
+
+	return retval;
+}
+
 ostream &operator<<(ostream &os, const Complex &b)
 {
 	if (b.Im < 0)
@@ -113,5 +122,8 @@ ostream &operator<<(ostream &os, const Complex &b)
 }
 istream &operator>>(istream &is, Complex &b)
 {
+	cin >> b.Re;
+	cin.ignore();
+	cin >> b.Im;
 	return is;
 }

@@ -10,7 +10,8 @@ int main(int argc, char* argv[])
 	double temp;
 	Complex a, b, res;
 
-	cout << "Enter real part of first complex number: ";
+
+	/*cout << "Enter real part of first complex number: ";
 	cin >> temp;
 	a.setReal(temp);
 	cout << endl;
@@ -28,7 +29,14 @@ int main(int argc, char* argv[])
 	cout << "Enter imaginary part of second complex number: ";
 	cin >> temp;
 	b.setImaginary(temp);
-	cout << endl;
+	cout << endl;*/
+
+	cout << "Enter first complex number: ";
+	cin >> a;
+
+	cout << "Enter second complex number: ";
+	cin >> b;
+
 	
 	res = a + b;
 	cout << "a+b = " << res;
