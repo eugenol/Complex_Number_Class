@@ -122,8 +122,11 @@ ostream &operator<<(ostream &os, const Complex &b)
 }
 istream &operator>>(istream &is, Complex &b)
 {
+	float Real, Imaginary; // Use these to chech if it is actually a complex number.
+
 	cin >> b.Re;
 	cin.ignore();
 	cin >> b.Im;
+
 	return is;
 }
